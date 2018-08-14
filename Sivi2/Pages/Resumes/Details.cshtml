@@ -1,0 +1,73 @@
+﻿@page
+@model Sivi2.Pages.Resumes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Resume</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Resume.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resume.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resume.MiddleName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resume.MiddleName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resume.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resume.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resume.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resume.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resume.City)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resume.City)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resume.State)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resume.State)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resume.Zip)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resume.Zip)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resume.Skills)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resume.Skills)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resume.Other)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resume.Other)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Resume.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

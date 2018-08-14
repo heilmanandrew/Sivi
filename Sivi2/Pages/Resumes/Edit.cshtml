@@ -1,0 +1,75 @@
+﻿@page
+@model Sivi2.Pages.Resumes.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Resume</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Resume.Id" />
+            <div class="form-group">
+                <label asp-for="Resume.FirstName" class="control-label"></label>
+                <input asp-for="Resume.FirstName" class="form-control" />
+                <span asp-validation-for="Resume.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Resume.MiddleName" class="control-label"></label>
+                <input asp-for="Resume.MiddleName" class="form-control" />
+                <span asp-validation-for="Resume.MiddleName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Resume.LastName" class="control-label"></label>
+                <input asp-for="Resume.LastName" class="form-control" />
+                <span asp-validation-for="Resume.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Resume.Address" class="control-label"></label>
+                <input asp-for="Resume.Address" class="form-control" />
+                <span asp-validation-for="Resume.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Resume.City" class="control-label"></label>
+                <input asp-for="Resume.City" class="form-control" />
+                <span asp-validation-for="Resume.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Resume.State" class="control-label"></label>
+                <input asp-for="Resume.State" class="form-control" />
+                <span asp-validation-for="Resume.State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Resume.Zip" class="control-label"></label>
+                <input asp-for="Resume.Zip" class="form-control" />
+                <span asp-validation-for="Resume.Zip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Resume.Skills" class="control-label"></label>
+                <input asp-for="Resume.Skills" class="form-control" />
+                <span asp-validation-for="Resume.Skills" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Resume.Other" class="control-label"></label>
+                <input asp-for="Resume.Other" class="form-control" />
+                <span asp-validation-for="Resume.Other" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Sivi2.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Sivi2.Models;
 
 namespace Sivi2
 {
@@ -52,6 +53,9 @@ namespace Sivi2
                 options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
                 options.HttpsPort = 5001;
             });
+
+            services.AddDbContext<Sivi2Context>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("Sivi2Context")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
